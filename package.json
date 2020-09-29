@@ -6,7 +6,7 @@
     "start": "node ./server.js"
   },
   "engines": {
-    "node": "v10.00.0",
+    "node": "v12.80.3",
     "npm": "v6.0.0"
   },
   "dependencies": {
