@@ -1,4 +1,4 @@
-//After turning index.js, It would be running all the codes
+//After running index.js, It would be running all the codes
 
 //It show where documents, path and location of files and call those.
 // 'node_module' is third party package to download and call something such as bootstrap, jquery and express
