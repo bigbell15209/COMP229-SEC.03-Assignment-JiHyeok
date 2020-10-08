@@ -1,7 +1,9 @@
-<%- include partials/header.ejs %>
+<%- include partials/headerforerror.ejs %>
 <%- include partials/main_nav.ejs %>
 
-<div class="container">
+<div class="container, row justify-content-md-center">
+    <img src="/Assets/images/oops.jpg" class="rounded" class="card-img-top" alt="..." style="width: 40rem;">
+    <h1>Oops! What happend?</h1>>
     <h1><%= message %></h1>
     <h2><%= error.status %></h2>
     <pre><%= error.stack %></pre>
