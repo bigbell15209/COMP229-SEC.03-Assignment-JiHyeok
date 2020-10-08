@@ -1,3 +1,9 @@
+/* // File Name : Assignment1  */
+/* // Student's Name : JiHyeok Kim  */
+/* // StudentID : 301105279  */
+/* // Date : 10/8/2020  */
+
+
 // IIFE -- Immediately Invoked Function Expression
 //  is a way to execute functions immediately
 

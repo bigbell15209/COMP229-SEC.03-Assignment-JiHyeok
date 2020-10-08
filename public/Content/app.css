@@ -1,8 +1,15 @@
 /* custom css goes here */
 
-body {
-    
+/* // File Name : Assignment1  */
+/* // Student's Name : JiHyeok Kim  */
+/* // StudentID : 301105279  */
+/* // Date : 10/8/2020  */
+
+body 
+{
+    margin-bottom: 40px;
+
     background-image: url("/Assets/images/background.jpg");
     opacity: 1;
     
-  }
+ }
