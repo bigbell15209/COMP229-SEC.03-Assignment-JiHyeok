@@ -1,6 +1,9 @@
 let express = require('express');
 let router = express.Router();
 
+// inside of routes folder, you can find index.js file
+// This method is running some functions when the application receives a request to the specified route(In this case, hompage)
+
 /* You can put another templete here instead of 'index' from views*/
 
 /* GET home page. */

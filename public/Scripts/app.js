@@ -1,6 +1,8 @@
 // IIFE -- Immediately Invoked Function Expression
-(function(){
+//  is a way to execute functions immediately
 
+
+(function(){
 
 
     function start(){

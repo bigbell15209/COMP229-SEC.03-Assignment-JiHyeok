@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+// When you initialize the node server, this starts first.
+
+
 /**
  * Module dependencies.
  */
