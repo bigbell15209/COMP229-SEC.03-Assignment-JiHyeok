@@ -44,7 +44,7 @@
 
             cancelButton.addEventListener("click",(event) => {
                 event.preventDefault();
-                if(confirm("Are you Sure?"))
+                if(confirm("Are you Sure to come back to Home page?"))
                 {
                     location.href = "/home";
                 }
