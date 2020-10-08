@@ -1,6 +1,6 @@
 //After turning index.js, It would be running all the codes
 
-//It show where documents, path, location of files and call those.
+//It show where documents, path and location of files and call those.
 // 'node_module' is third party package to download and call something such as bootstrap, jquery and express
 
 // in 'public', You can download resources here such as images, style sheet and js file(In this case, it plays a role as IIFE -- Immediately Invoked Function Expression)
