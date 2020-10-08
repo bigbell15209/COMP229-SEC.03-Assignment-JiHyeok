@@ -1,9 +1,9 @@
 {
-  "name": "comp229-f2020-week3-jihyeok",
+  "name": "comp229-f2020-Assignment1-jihyeok",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./server.js"
+    "start": "node ./index.js"
   },
   "engines": {
     "node": "^14.11.0",
@@ -27,12 +27,12 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bigbell15209/comp229-f2020-week3-jihyeok.git"
+    "url": "git+https://github.com/bigbell15209/comp229-f2020-Assignment1-jihyeok.git"
   },
   "author": "jihyeok",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bigbell15209/comp229-f2020-week3-jihyeok/issues"
+    "url": "https://github.com/bigbell15209/comp229-f2020-Assignment1-jihyeok/issues"
   },
-  "homepage": "https://github.com/bigbell15209/comp229-f2020-week3-jihyeok#readme"
+  "homepage": "https://github.com/bigbell15209/comp229-f2020-Assignment1-jihyeok#readme"
 }
