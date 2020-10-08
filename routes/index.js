@@ -1,5 +1,7 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+
+/* You can put another templete here instead of 'index' from views*/
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -13,22 +15,22 @@ router.get('/home', function(req, res, next) {
 
 /* GET About page. */
 router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About'});
+  res.render('about', { title: 'About'});
 });
 
 /* GET Products page. */
 router.get('/products', function(req, res, next) {
-  res.render('index', { title: 'Products'});
+  res.render('products', { title: 'Products'});
 });
 
 /* GET Services page. */
 router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Services'});
+  res.render('services', { title: 'Services'});
 });
 
 /* GET Contact Us page. */
 router.get('/contact', function(req, res, next) {
-  res.render('index', { title: 'Contact'});
+  res.render('contact', { title: 'Contact', message: 'Contact Us'});
 });
 
 module.exports = router;

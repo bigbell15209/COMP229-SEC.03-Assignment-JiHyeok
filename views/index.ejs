@@ -1,18 +1,30 @@
-<%- include partials/header.ejs %>
-
-<%- include partials/main_nav.ejs %>
+<%- include ./partials/header.ejs %>
+<%- include ./partials/main_nav.ejs %>
 
   <!--Main contents-->
   <main class="container">
-   <div class="jumbotron">
-     <h1 class="display-4">Welcome to the <%= title %> Page</h1>
-    
-   </div>
-  </main>
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron">
+          <h1 class="display-4"><%= title %></h1>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col-6">
+        <h2 class="display-5">Welcome to the <%= title %> Page</h2>
+        <h2 class="display-5">Bienvenue sur ma <%= title %> Page</h2>        
+        <hr class="my-4">
+      </div>
+    </div>
 
-<%- include partials/bottom_nav.ejs %>
+    <!-- Additional Contents here~ -->
 
-<%- include partials/footer.ejs %>
+  </main> 
+
+
+<%- include ./partials/bottom_nav.ejs %>
+<%- include ./partials/footer.ejs %>
 
   
 
