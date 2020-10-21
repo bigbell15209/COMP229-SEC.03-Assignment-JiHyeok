@@ -2,17 +2,17 @@
 
 // When you initialize the node server, this starts first.
 
-// File Name : Assignment1 
+// File Name : Assignment2
 // Student's Name : JiHyeok Kim 
 // StudentID : 301105279 
-// Date : 10/8/2020 
+// Date : 10/22/2020 
 
 /**
  * Module dependencies.
  */
 
 var app = require('./config/app');
-var debug = require('debug')('Assignment1:index');
+var debug = require('debug')('Assignment2:index');
 var http = require('http');
 
 /**

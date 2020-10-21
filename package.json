@@ -1,5 +1,5 @@
 {
-  "name": "comp229-f2020-assignment1-jihyeok",
+  "name": "comp229-f2020-assignment2-jay",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -27,12 +27,12 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bigbell15209/comp229-f2020-Assignment1-jihyeok.git"
+    "url": "git+https://github.com/bigbell15209/COMP229-SEC.03-Assignment-JiHyeok.git"
   },
   "author": "jihyeok",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bigbell15209/comp229-f2020-Assignment1-jihyeok/issues"
+    "url": "https://github.com/bigbell15209/COMP229-SEC.03-Assignment-JiHyeok/issues"
   },
-  "homepage": "https://github.com/bigbell15209/comp229-f2020-Assignment1-jihyeok#readme"
+  "homepage": "https://github.com/bigbell15209/COMP229-SEC.03-Assignment-JiHyeok#readme"
 }
