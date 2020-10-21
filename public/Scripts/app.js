@@ -1,11 +1,26 @@
 // IIFE -- Immediately Invoked Function Expression
 (function(){
-
-
-
-    function start(){
+    function start()
+    {
         console.log("App Started....");
+        
+        //Steps for preventing process from quick confirming
+        let deleteButtons = document.querySelectorAll('.btn-danger')
 
+        for(button of deleteButtons)
+        {
+            button.addEventListener('click',(event)=>{
+                if(!confirm("Are you sure?")) 
+                {
+                    event.preventDefault();
+                    window.location.assign('/book-list');
+                }
+            });
+        }
+
+
+
+        //capture the information entered
         if(document.title == "Contact")
         {
             let sendButton = document.getElementById("sendButton");
@@ -44,8 +59,7 @@
         }
 
     }
-
     window.addEventListener('load',start);
-
-
 })();
+
+

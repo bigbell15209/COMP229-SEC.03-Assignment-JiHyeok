@@ -4,8 +4,8 @@
  * Module dependencies.
  */
 
-var app = require('./config/app');
-var debug = require('debug')('week3-2:index');
+var app = require('./server/config/app');
+var debug = require('debug')('week6:index');
 var http = require('http');
 
 /**
