@@ -13,16 +13,16 @@ module.exports.displayHomePage = (req,res,next) => {
     res.render('index', {title: 'Home', displayName: req.user ? req.user.displayName : ''});
 }
 module.exports.displayAboutPage = (req,res,next) => {
-    res.render('index', {title: 'About', displayName: req.user ? req.user.displayName : ''});
+    res.render('about', {title: 'About', displayName: req.user ? req.user.displayName : ''});
 }
 module.exports.displayProductsPage = (req,res,next) => {
-    res.render('index', {title: 'Projects', displayName: req.user ? req.user.displayName : ''});
+    res.render('projects', {title: 'Projects', displayName: req.user ? req.user.displayName : ''});
 }
 module.exports.displayServicesPage = (req,res,next) => {
-    res.render('index', {title: 'Services', displayName: req.user ? req.user.displayName : ''});
+    res.render('services', {title: 'Services', displayName: req.user ? req.user.displayName : ''});
 }
 module.exports.displayContactPage = (req,res,next) => {
-    res.render('index', {title: 'Contact', displayName: req.user ? req.user.displayName : ''});
+    res.render('contact', {title: 'Contact', displayName: req.user ? req.user.displayName : ''});
 }
 
 
@@ -61,7 +61,7 @@ module.exports.processLoginPage = (req,res,next) => {
             return res.redirect('/login');
         }
         req.login(user, (err) => {
-            //server error?
+            // db server error?
             if(err)
             {
                 return next(err);
@@ -122,6 +122,8 @@ module.exports.processRegisterPage = (req,res,next) => {
         {
             // if no error exists, then registration is successful
             // redirect the user and authenticate them!
+            // option1 : redirect to the list page, option2 : automatically log-in
+
             return passport.authenticate('local')(req,res,() => {
                 res.redirect('/book-list')
             });
