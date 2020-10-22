@@ -1,0 +1,37 @@
+    <%- include ./partials/header.ejs %>
+	<%- include ./partials/main_nav.ejs %>
+
+	<!-- Main Content -->
+	<main class="container">
+		<div class="jumbotron">
+			<h1 class="display-4">Business Contact list</h1>
+			<hr class="my-4">
+		</div>
+		<div class="row">
+			<div class="col-mid-offset-3 col-md-8">
+				<h1><%= title %></h1>
+				<br>
+				<table class="table table-bordered table-striped table-hover">
+				  <thead class="thead-dark">
+					<tr><!-- Header Row -->
+						<th class="text-center">Contact Name</th>
+						<th class="text-center">Contact Number</th>
+						<th class="text-center">Email Address</th>
+					</tr>
+				  </thead>
+					  
+					<!-- Repeatable Template Row -->
+					<% for(let count=0; count<BusinessList.length; count++) { %>
+						<tr>
+							<td class="text-center"><%= BusinessList[count].name %></td>
+							<td class="text-center"><%= BusinessList[count].number %></td>
+							<td class="text-center"><%= BusinessList[count].email %></td>
+						</tr>
+					<% } %>  
+				</table>
+			</div>
+		</div>
+	</main>
+
+	<%- include partials/bottom_nav.ejs %>
+	<%- include partials/footer.ejs %>
