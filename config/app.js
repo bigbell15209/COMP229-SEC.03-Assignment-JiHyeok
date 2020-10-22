@@ -17,6 +17,7 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
+
 //database setup
 let mongoose = require('mongoose');
 let DB = require('./db');
@@ -43,6 +44,7 @@ dbConnection.on('reconnected',()=>{
 
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
+let businessRouter = require('../routes/business');
 
 let app = express();
 
@@ -60,9 +62,11 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules')));
 
 
-
+//routing
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/business-list', businessRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
