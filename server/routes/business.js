@@ -58,7 +58,7 @@ router.get('/edit/:id', (req, res, next) => {
 		else
 		{
 			//show the Edit view
-			res.render('business/edit', {title: 'Edit Book', book: businessToEdit})
+			res.render('business/edit', {title: 'Edit', business: businessToEdit})
 		}
 	});
 });
@@ -81,7 +81,7 @@ router.post('/edit/:id', (req, res, next) => {
 		}
 		else
 		{
-			//reflesh the book list
+			//reflesh the business list
 			res.redirect('/business-list');        
 		}
 	});
