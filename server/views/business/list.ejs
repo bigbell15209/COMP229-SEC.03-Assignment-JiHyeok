@@ -10,8 +10,10 @@
 	<div class="row">
 		<div class="col-mid-offset-3 col-md-8">
 			<h1><%= title %></h1>
-			<a href="/business-list/add" class="btn btn-primary" role="button">
-			<i class="fas fa-plus-circle"></i> Add a Book</a>
+			<% if(typeof displayName == 'string' && displayName){ %>
+				<a href="/business-list/add" class="btn btn-primary" role="button">
+				<i class="fas fa-plus-circle"></i> Add a Book</a>
+			<% } %>
 			<hr>
 			<table class="table table-bordered table-striped table-hover">
 				<thead class="thead-dark">
@@ -19,8 +21,10 @@
 					<th class="text-center">Contact Name</th>
 					<th class="text-center">Contact Number</th>
 					<th class="text-center">Email Address</th>
-					<th class="text-center"></th>
-                    <th class="text-center"></th>
+					<% if(typeof displayName == 'string' && displayName){ %>
+						<th class="text-center"></th>
+						<th class="text-center"></th>
+					<% } %>
 				</tr>
 				</thead>
 					
@@ -30,14 +34,16 @@
 						<td class="text-center"><%= BusinessList[count].name %></td>
 						<td class="text-center"><%= BusinessList[count].number %></td>
 						<td class="text-center"><%= BusinessList[count].email %></td>
-						<th class="text-center col-1">
-							<a href="/business-list/edit/<%= BusinessList[count]._id %>" class="btn btn-primary btn-sm">
-							<i class="fas fa-pencil-alt"></i> Edit</a>
-						</th>
-						<th class="text-center col-1">
-							<a href="/business-list/delete/<%= BusinessList[count]._id %>" class="btn btn-danger btn-sm">
-							<i class="fas fa-trash-alt"></i> Delete</a>
-						</th>
+						<% if(typeof displayName == 'string' && displayName){ %>
+							<th class="text-center col-1">
+								<a href="/business-list/edit/<%= BusinessList[count]._id %>" class="btn btn-primary btn-sm">
+								<i class="fas fa-pencil-alt"></i> Edit</a>
+							</th>
+							<th class="text-center col-1">
+								<a href="/business-list/delete/<%= BusinessList[count]._id %>" class="btn btn-danger btn-sm">
+								<i class="fas fa-trash-alt"></i> Delete</a>
+							</th>
+						<% } %>
 					</tr>
 				<% } %>  
 			</table>
