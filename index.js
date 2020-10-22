@@ -11,7 +11,7 @@
  * Module dependencies.
  */
 
-var app = require('./config/app');
+var app = require('./server/config/app');
 var debug = require('debug')('Assignment2:index');
 var http = require('http');
 
