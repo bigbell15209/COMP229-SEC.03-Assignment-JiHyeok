@@ -17,6 +17,30 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
+//database setup
+let mongoose = require('mongoose');
+let DB = require('./db');
+
+//point mongoose to the DB URI
+mongoose.connect(DB.URI, {useNewUrlParser: true, useUnifiedTopology: true});
+
+//Check to see server when mongo is created
+let dbConnection = mongoose.connection;
+dbConnection.on('error', console.error.bind(console, 'Connection Error:'))
+dbConnection.once('open',()=>{
+  console.log('MongoDB Connection OPEN');
+});
+dbConnection.once('connected',()=>{
+  console.log('MongoDB Connected');
+});
+dbConnection.on('disconnected',()=>{
+  console.log('MongoDB Disconnected');
+});
+dbConnection.on('reconnected',()=>{
+  console.log('MongoDB Reconnected');
+});
+
+
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
 
