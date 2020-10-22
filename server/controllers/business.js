@@ -16,7 +16,9 @@ module.exports.displayBusinessList = (req,res,next) => {
 
         else
         {
-            res.render('business/list', {title : 'Businesses', BusinessList: businessList})//pushing to the view
+            res.render('business/list', {title : 'Businesses', 
+            BusinessList: businessList, 
+            displayName: req.user ? req.user.displayName : ''})//pushing to the view
         }
 
     });
@@ -24,7 +26,8 @@ module.exports.displayBusinessList = (req,res,next) => {
 
 // 1-1)Export the get Route for the displaying the Add Page - CREATE Operation
 module.exports.displayAddPage= (req, res, next) => {
-    res.render('business/add', {title : 'Add Business'})//pushing to the view
+    res.render('business/add', {title : 'Add Business',
+    displayName: req.user ? req.user.displayName : ''})//pushing to the view
 };
 // 1-2)Export the Post Route for the processing the Add Page - CREATE Operation
 module.exports.processAddPage = (req, res, next) => {
@@ -61,10 +64,12 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             //show the Edit view
-            res.render('business/edit', {title: 'Edit Business', business: businessToEdit})
+            res.render('business/edit', {title: 'Edit Business', business: businessToEdit,
+            displayName: req.user ? req.user.displayName : ''})
         }
     });
 }
+
 // 2-2)Export the Post Route for the processing the Edit Page - UPDATE Operation
 module.exports.processEditPage = (req, res, next) => {
     let id= req.params.id

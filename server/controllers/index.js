@@ -8,21 +8,21 @@ let userModel = require('../models/user');
 let User = userModel.User; // alias
 
 
-//Export five modules
+//Export five modules and require authentication
 module.exports.displayHomePage = (req,res,next) => {
-    res.render('index', {title: 'Home'});
+    res.render('index', {title: 'Home', displayName: req.user ? req.user.displayName : ''});
 }
 module.exports.displayAboutPage = (req,res,next) => {
-    res.render('about', {title: 'About'});
+    res.render('about', {title: 'About', displayName: req.user ? req.user.displayName : ''});
 }
 module.exports.displayProductsPage = (req,res,next) => {
-    res.render('projects', {title: 'Products'});
+    res.render('projects', {title: 'Products', displayName: req.user ? req.user.displayName : ''});
 }
 module.exports.displayServicesPage = (req,res,next) => {
-    res.render('services', {title: 'Services'});
+    res.render('services', {title: 'Services', displayName: req.user ? req.user.displayName : ''});
 }
 module.exports.displayContactPage = (req,res,next) => {
-    res.render('contact', {title: 'Contact'});
+    res.render('contact', {title: 'Contact', displayName: req.user ? req.user.displayName : ''});
 }
 
 

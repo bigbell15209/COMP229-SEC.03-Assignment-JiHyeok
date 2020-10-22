@@ -66,5 +66,14 @@
         <% } %> 
           <a class="nav-link" href="/business-list"><i class="fas fa-list-ol"></i> List </a>
         </li>
+
+        <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
+          <li class="nav-item"><a href="/logout" class="nav-link">
+          <i class="fas fa-lg fa-sign-out-alt"></i> Log-Out</a></li>
+        <% } else { %>
+          <li class="nav-item"><a href="/login" class="nav-link">
+          <i class="fas fa-lg fa-sign-in-alt"></i> Log-in</a></li>
+        <% } %>
     </div>
   </nav>
