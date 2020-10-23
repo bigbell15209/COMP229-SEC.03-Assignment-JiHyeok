@@ -3,13 +3,23 @@
 
 <!-- Main Content -->
 <main class="container">
-	<div class="jumbotron">
-		<h1 class="display-4">Business Contact list</h1>
-		<hr class="my-4">
-	</div>
 	<div class="row">
-		<div class="col-mid-offset-3 col-md-8">
-			<h1><%= title %></h1>
+        <div class="col">
+        </div>
+        <div class="col">
+          <div class="my-5 rounded-pill title-background" >
+            <br>
+            <h1 id="font-title" class="display-4 text-center"> List <i class="fas fa-scroll"> </i></h1>
+          </div>
+        </div>
+        <div class="col">
+        </div>
+	  </div>
+	  
+	<div class="row">
+		
+		<div class="w-100 d-block">
+			<h1> Contact List</h1>
 			<% if(typeof displayName == 'string' && displayName){ %>
 				<a href="/business-list/add" class="btn btn-primary" role="button">
 				<i class="fas fa-plus-circle"></i> Add a Book</a>
@@ -35,11 +45,11 @@
 						<td class="text-center"><%= BusinessList[count].number %></td>
 						<td class="text-center"><%= BusinessList[count].email %></td>
 						<% if(typeof displayName == 'string' && displayName){ %>
-							<th class="text-center col-1">
+							<th class="text-center">
 								<a href="/business-list/edit/<%= BusinessList[count]._id %>" class="btn btn-primary btn-sm">
 								<i class="fas fa-pencil-alt"></i> Edit</a>
 							</th>
-							<th class="text-center col-1">
+							<th class="text-center">
 								<a href="/business-list/delete/<%= BusinessList[count]._id %>" class="btn btn-danger btn-sm">
 								<i class="fas fa-trash-alt"></i> Delete</a>
 							</th>

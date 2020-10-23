@@ -11,10 +11,16 @@
   <!--Main contents-->
   <main class="container">
     
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Hi! Welcome to my <%= title %> Page</h1>
-        <p class="lead">I'm so glad to see you~</p>
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col">
+        <div class="my-5 rounded-pill title-background" >
+          <br>
+          <h1 id="font-title" class="display-4 text-center"><%= title %> <i class="fas fa-scroll"> </i></h1>
+        </div>
+      </div>
+      <div class="col">
       </div>
     </div>
     
@@ -25,16 +31,18 @@
         <!-- Subcontents here~ -->
     <div class="row justify-content-md-center">
       <div class="col-10">
-        <h3 class="display-6">:)  I'm Second year third semester student at Centennial College, majoring in Software Engineering Technichan.</h3>
-        <p></p>
-        <h3 class="display-6">I'm always here for you to help</h3>
-        <P></P>        
-        <h3 class="display-6">So, Plz do not hesitate to <a href="/contact">contact</a> me.</h3>
+
+        <hr class="my-4">
+        <ul class="list-group, width:100px">
+          <li class="list-group-item"><i class="fas fa-laptop-medical"></i></i>I'm Second year third semester student at Centennial College, majoring in <mark>Software Engineering Technichan.</mark></li>
+          <li class="list-group-item"><i class="fas fa-smile-wink"></i> I'm always here for you to help</li>
+          <li class="list-group-item"><i class="fas fa-phone-volume"></i> So, Plz do not hesitate to <a href="/contact">contact</a> me. </li>
+        </ul>
         
         <hr class="my-4">
         <ul class="list-group, width:100px">
-          <li class="list-group-item active, lg"><i class="fas fa-desktop"></i> My Mission Statement</li>
-          <li class="list-group-item">I'm here to help and achieve your successful online business. </li>
+          <li class="list-group-item active, lg"><i class="fas fa-desktop"></i> My Mission Statement 
+            <br>: I'm here to help and achieve your successful online business.</li>
         </ul>
 
       </div>
