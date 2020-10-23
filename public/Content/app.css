@@ -13,3 +13,12 @@ body
     opacity: 1;
     
  }
+
+ #font-title{
+    font-family: 'Grandstander', cursive;
+ }
+
+ .title-background{
+    height: 150px; 
+    background-color: whitesmoke;"
+ }
