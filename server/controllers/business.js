@@ -26,7 +26,7 @@ module.exports.displayBusinessList = (req,res,next) => {
 
 // 1-1)Export the get Route for the displaying the Add Page - CREATE Operation
 module.exports.displayAddPage= (req, res, next) => {
-    res.render('business/add', {title : 'Add Business',
+    res.render('business/add', {title : 'Add New Contact List',
     displayName: req.user ? req.user.displayName : ''})//pushing to the view
 };
 // 1-2)Export the Post Route for the processing the Add Page - CREATE Operation
@@ -64,7 +64,7 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             //show the Edit view
-            res.render('business/edit', {title: 'Edit Business', business: businessToEdit,
+            res.render('business/edit', {title: 'Edit the List', business: businessToEdit,
             displayName: req.user ? req.user.displayName : ''})
         }
     });
