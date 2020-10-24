@@ -48,6 +48,7 @@ dbConnection.on('reconnected',()=>{
 });
 
 
+//routing
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
 let businessRouter = require('../routes/business');
@@ -94,9 +95,9 @@ app.use(passport.session());
 
 //routing
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/users', usersRouter); 
 app.use('/business-list', businessRouter);
-
+//when application receive the request(users and business list) , it will refer to the above mentioned router
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
