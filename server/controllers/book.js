@@ -2,6 +2,9 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
+//for jwt
+let jwt = require('jsonwebtoken');
+
 //create a reference to the model
 let Book = require('../models/book');
 

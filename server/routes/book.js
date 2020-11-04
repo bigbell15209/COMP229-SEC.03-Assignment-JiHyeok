@@ -2,6 +2,9 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');// call mongoose
 
+//for jwt
+let jwt = require('jsonwebtoken');
+
 let passport = require('passport');
 
 let bookController = require('../controllers/book');
